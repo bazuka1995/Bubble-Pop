@@ -4,7 +4,7 @@
 //
 //  Created by Dov Royal on 4/5/20.
 //  Copyright © 2020 Dov Royal. All rights reserved.
-//
+//  Class for the high scores screen
 
 import UIKit
 
