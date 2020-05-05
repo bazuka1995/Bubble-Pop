@@ -21,6 +21,7 @@
 		96209642245FBC3E0006BDD0 /* StartGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96209641245FBC3E0006BDD0 /* StartGame.swift */; };
 		96209644245FBCA70006BDD0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96209643245FBCA70006BDD0 /* Game.swift */; };
 		96209646245FD6780006BDD0 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96209645245FD6780006BDD0 /* GameOver.swift */; };
+		96B45DFB2460E96E001E927A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B45DFA2460E96E001E927A /* Bubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		96209641245FBC3E0006BDD0 /* StartGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGame.swift; sourceTree = "<group>"; };
 		96209643245FBCA70006BDD0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		96209645245FD6780006BDD0 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		96B45DFA2460E96E001E927A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				96209641245FBC3E0006BDD0 /* StartGame.swift */,
 				96209643245FBCA70006BDD0 /* Game.swift */,
 				96209645245FD6780006BDD0 /* GameOver.swift */,
+				96B45DFA2460E96E001E927A /* Bubble.swift */,
 				96209611245FB5410006BDD0 /* Main.storyboard */,
 				96209614245FB5410006BDD0 /* Assets.xcassets */,
 				96209616245FB5410006BDD0 /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96209642245FBC3E0006BDD0 /* StartGame.swift in Sources */,
+				96B45DFB2460E96E001E927A /* Bubble.swift in Sources */,
 				96209610245FB5410006BDD0 /* ViewController.swift in Sources */,
 				9620960C245FB5410006BDD0 /* AppDelegate.swift in Sources */,
 				96209646245FD6780006BDD0 /* GameOver.swift in Sources */,
