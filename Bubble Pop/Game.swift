@@ -12,13 +12,14 @@ class Game: UIViewController {
     
     var finalName = "" // Name of the player passed in from startgame viewcontroller
     var gameTime = 60 // Game time passed in from startgame viewcontroller
+    var maxBubble = 15 // Maximum number of bubbles on the screen
     var timer = Timer() // Timer function
     var score = 0 // player score
     var minX = 20 // Min and max x and y coordinates
     var maxX = 348 // for buttons
     var minY = 177
     var maxY = 832
-    var run = false
+    var run = false // stores whether the game timer is 1 second less than the user set game time
     
     var colours: [String] = [] // array to store colours
     
@@ -75,7 +76,7 @@ class Game: UIViewController {
     }
     
     func setUpRandomArray() { // set up random array to store colours with weights
-        let red = [String](repeating: "Red.png", count: 40)
+        let red = [String](repeating: "Red.png", count: 40) // sets up each individual colour array with weighting
         let purple = [String](repeating: "Purple.png", count: 30)
         let green = [String](repeating: "Green.png", count: 15)
         let blue = [String](repeating: "Blue.png", count: 10)

@@ -12,6 +12,7 @@ class StartGame: UIViewController {
     
     var seconds = 60 // default game time
     var name = ""
+    var maxBubbles = 15 // default max number of bubble
     
     @IBAction func startGame(_ sender: Any) {
         name = nameField.text!
@@ -27,16 +28,27 @@ class StartGame: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var maxLabel: UILabel!
+    
+    @IBOutlet weak var maxSlider: UISlider!
+    
     @IBAction func updateSlider(_ sender: UISlider) { // update the timer label when sliding the slider
         seconds = Int(sender.value)
         timerLabel.text = String(seconds) + " seconds"
     }
+    
+    @IBAction func updateMaxSlider(_ sender: UISlider) {
+        maxBubbles = Int(sender.value)
+        maxLabel.text = "Maximum bubbles: " + String(maxBubbles)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Game") {
             let gameVC = segue.destination as! Game
             gameVC.finalName = nameField.text! // pass user name into the game screen
             gameVC.gameTime = seconds // pass user selected game time into the game screen
+            gameVC.maxBubble = maxBubbles
         }
     }
     
