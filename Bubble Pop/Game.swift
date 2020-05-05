@@ -57,7 +57,8 @@ class Game: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //
         if (segue.identifier == "GameOver") {
-            
+            let gameOverVC = segue.destination as! GameOver
+            gameOverVC.finalScore = String(score)
         }
     }
     

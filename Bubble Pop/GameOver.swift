@@ -9,9 +9,15 @@
 import UIKit
 
 class GameOver: UIViewController {
+    
+    var finalScore = ""
+    
+    @IBOutlet weak var scoreLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scoreLabel.text = finalScore
         
         navigationItem.hidesBackButton = true // hide navigation bar back button
         

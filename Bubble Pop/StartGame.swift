@@ -17,11 +17,15 @@ class StartGame: UIViewController {
         name = nameField.text!
     }
     
+    @IBOutlet weak var startButton: UIButton!
+    
     @IBOutlet weak var nameField: UITextField! // input field for user name
     
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var timerSlider: UISlider!
+    
+    @IBOutlet weak var errorLabel: UILabel!
     
     @IBAction func updateSlider(_ sender: UISlider) { // update the timer label when sliding the slider
         seconds = Int(sender.value)
@@ -38,5 +42,22 @@ class StartGame: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startButton.isEnabled = false // start with disabled button until user enters name
+        
+        nameField.addTarget(self, action: #selector(self.validateName), for: .editingChanged) // add target to namefield so that the name can be validated
+    }
+    
+    @objc func validateName() { // validate name field to make sure its between 2-15 characters
+        if (nameField.text!.count < 2) {
+            errorLabel.text = "Please enter a name that is greater than 2 characters"
+            startButton.isEnabled = false
+        } else if (nameField.text!.count > 15) {
+            errorLabel.text = "Please enter a name that is less than 15 characters"
+            startButton.isEnabled = false
+        } else {
+            errorLabel.text = ""
+            startButton.isEnabled = true
+        }
     }
 }
