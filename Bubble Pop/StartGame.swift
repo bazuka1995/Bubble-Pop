@@ -10,7 +10,7 @@ import UIKit
 
 class StartGame: UIViewController {
     
-    var seconds = 30 // default game time
+    var seconds = 60 // default game time
     var name = ""
     
     @IBAction func startGame(_ sender: Any) {

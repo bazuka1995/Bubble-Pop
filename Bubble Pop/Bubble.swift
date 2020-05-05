@@ -16,16 +16,31 @@ class Bubble: UIButton {
     var width: Int
     var height: Int
     var button: UIButton // set up initial button type
-    var colour: UIColor
+    var colour: String
     
-    init(x: Int, y: Int, colour: UIColor) {
+    init(x: Int, y: Int, colour: String) {
         self.x = x
         self.y = y
         self.width = 50
         self.height = 50
-        self.points = 10
         self.button = UIButton(type: .custom)
         self.colour = colour
+        
+        switch colour { // set the number of points based on bubble colour
+        case "Red.png":
+            self.points = 1
+        case "Purple.png":
+            self.points = 2
+        case "Green.png":
+            self.points = 5
+        case "Blue.png":
+            self.points = 8
+        case "Brown.png":
+            self.points = 10
+        default:
+            self.points = 1
+        }
+        
         super.init(frame: .zero)
         
         createBubble() // create a bubble button straight away after it is called
@@ -38,16 +53,11 @@ class Bubble: UIButton {
     func createBubble() {
         self.frame = CGRect(x: x, y: y, width: width, height: height) // set coord and size of button
         self.layer.cornerRadius = 0.5 * self.bounds.size.width // create a round button
-        self.backgroundColor = colour
+        self.setImage(UIImage(named: colour), for: .normal)
         self.clipsToBounds = true
-        self.addTarget(self, action: #selector(self.bubbleTapped), for: .touchUpInside) // add an action to the button when clicked
     }
     
     func removeBubble() {
         self.removeFromSuperview()
-    }
-    
-    @objc func bubbleTapped() {
-        
     }
 }

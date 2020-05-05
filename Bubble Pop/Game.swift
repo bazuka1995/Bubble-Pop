@@ -11,13 +11,15 @@ import UIKit
 class Game: UIViewController {
     
     var finalName = "" // Name of the player passed in from startgame viewcontroller
-    var gameTime = 30 // Game time passed in from startgame viewcontroller
+    var gameTime = 60 // Game time passed in from startgame viewcontroller
     var timer = Timer() // Timer function
     var score = 0 // player score
     var minX = 20 // Min and max x and y coordinates
     var maxX = 348 // for buttons
     var minY = 177
     var maxY = 832
+    
+    let colour = ["Red.png", "Purple.png", "Green.png", "Blue.png", "Brown.png"] // store colours for the bubble
     
     @IBOutlet weak var timeLeft: UILabel! // Time left ui label in top left corner
     
@@ -31,21 +33,21 @@ class Game: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.counter), userInfo: nil, repeats: true) // create timer and start counting down as soon as the viw is loaded
         
-        //Top left (20,177)
-        //Top right (348,177)
-        //Bottom left (20,832)
-        //Bottom right (348, 832)
-        
-        var bubble = Bubble(x: 20, y: 177, colour: UIColor.blue)
-        
-        self.view.addSubview(bubble)
-        
         super.viewDidLoad()
     }
     
     @objc func counter() { // update timer every 1 sec
         gameTime -= 1
         timeLeft.text = String(gameTime)
+        
+        let x = Int.random(in: minX...maxX)
+        let y = Int.random(in: minY...maxY)
+        let c = Int.random(in:0...4)
+        
+        var bubble = Bubble(x: x, y: y, colour: colour[c]) // create bubble with random coord
+        bubble.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
+        
+        self.view.addSubview(bubble)
         
         if (gameTime == 0) { // stop timer when it reaches 0
             timer.invalidate()
@@ -59,9 +61,11 @@ class Game: UIViewController {
         }
     }
     
-    func updateScore(bubble: UIButton) { // update the score when a button is pressed
-        score += 1
+    @objc func updateScore(bubble: Bubble) { // update the score when a button is pressed
+        score += bubble.points
         scoreLabel.text = String(score)
+        
+        bubble.removeBubble()
     }
 
 }
