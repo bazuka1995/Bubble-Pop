@@ -48,7 +48,7 @@ class StartGame: UIViewController {
         nameField.addTarget(self, action: #selector(self.validateName), for: .editingChanged) // add target to namefield so that the name can be validated
     }
     
-    @objc func validateName() { // validate name field to make sure its between 2-15 characters
+    @objc func validateName() { // validate name field to make sure its between 2-15 characters. Disable button for invalid name
         if (nameField.text!.count < 2) {
             errorLabel.text = "Please enter a name that is greater than 2 characters"
             startButton.isEnabled = false

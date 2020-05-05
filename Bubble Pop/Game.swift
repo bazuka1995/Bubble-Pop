@@ -59,6 +59,7 @@ class Game: UIViewController {
         if (segue.identifier == "GameOver") {
             let gameOverVC = segue.destination as! GameOver
             gameOverVC.finalScore = String(score)
+            gameOverVC.finalName = finalName
         }
     }
     
