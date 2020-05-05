@@ -10,20 +10,20 @@ import UIKit
 
 class StartGame: UIViewController {
     
-    var seconds = 30
+    var seconds = 30 // default game time
     var name = ""
     
     @IBAction func startGame(_ sender: Any) {
         name = nameField.text!
     }
     
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameField: UITextField! // input field for user name
     
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var timerSlider: UISlider!
     
-    @IBAction func updateSlider(_ sender: UISlider) {
+    @IBAction func updateSlider(_ sender: UISlider) { // update the timer label when sliding the slider
         seconds = Int(sender.value)
         timerLabel.text = String(seconds) + " seconds"
     }
@@ -31,8 +31,8 @@ class StartGame: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Game") {
             let gameVC = segue.destination as! Game
-            gameVC.finalName = nameField.text!
-            gameVC.gameTime = seconds
+            gameVC.finalName = nameField.text! // pass user name into the game screen
+            gameVC.gameTime = seconds // pass user selected game time into the game screen
         }
     }
     
