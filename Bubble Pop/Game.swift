@@ -18,8 +18,9 @@ class Game: UIViewController {
     var maxX = 348 // for buttons
     var minY = 177
     var maxY = 832
+    var run = false
     
-    let colour = ["Red.png", "Purple.png", "Green.png", "Blue.png", "Brown.png"] // store colours for the bubble
+    var colours: [String] = [] // array to store colours
     
     @IBOutlet weak var timeLeft: UILabel! // Time left ui label in top left corner
     
@@ -33,6 +34,8 @@ class Game: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.counter), userInfo: nil, repeats: true) // create timer and start counting down as soon as the viw is loaded
         
+        setUpRandomArray()
+        
         super.viewDidLoad()
     }
     
@@ -40,11 +43,12 @@ class Game: UIViewController {
         gameTime -= 1
         timeLeft.text = String(gameTime)
         
+        
         let x = Int.random(in: minX...maxX)
         let y = Int.random(in: minY...maxY)
-        let c = Int.random(in:0...4)
+        let c = Int.random(in: 0...99)
         
-        var bubble = Bubble(x: x, y: y, colour: colour[c]) // create bubble with random coord
+        var bubble = Bubble(x: x, y: y, colour: colours[c]) // create bubble with random coord
         bubble.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
         
         self.view.addSubview(bubble)
@@ -68,6 +72,18 @@ class Game: UIViewController {
         scoreLabel.text = String(score)
         
         bubble.removeBubble()
+    }
+    
+    func setUpRandomArray() { // set up random array to store colours with weights
+        let red = [String](repeating: "Red.png", count: 40)
+        let purple = [String](repeating: "Purple.png", count: 30)
+        let green = [String](repeating: "Green.png", count: 15)
+        let blue = [String](repeating: "Blue.png", count: 10)
+        let brown = [String](repeating: "Brown.png", count: 5)
+
+        colours = red + purple + green + blue + brown // add each single array to the larger array
+
+        colours.shuffle() // randomise array so that it is truelly chosen at random
     }
 
 }
