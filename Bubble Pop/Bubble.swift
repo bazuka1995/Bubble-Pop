@@ -17,14 +17,16 @@ class Bubble: UIButton {
     var height: Int
     var button: UIButton // set up initial button type
     var colour: String
+    var id: Int
     
-    init(x: Int, y: Int, colour: String) {
+    init(x: Int, y: Int, colour: String, id: Int) {
         self.x = x
         self.y = y
         self.width = 50
         self.height = 50
         self.button = UIButton(type: .custom)
         self.colour = colour
+        self.id = id
         
         switch colour { // set the number of points based on bubble colour
         case "Red.png":

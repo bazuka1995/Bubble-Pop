@@ -20,8 +20,10 @@ class Game: UIViewController {
     var minY = 177
     var maxY = 832
     var run = false // stores whether the game timer is 1 second less than the user set game time
+    var id = 1 // Store unique id of each bubble button
     
     var colours: [String] = [] // array to store colours
+    var bubbleArray: [Bubble] = [] // array to store all the bubbles
     
     @IBOutlet weak var timeLeft: UILabel! // Time left ui label in top left corner
     
@@ -33,9 +35,9 @@ class Game: UIViewController {
         welcomeNav.title = "Hello " + finalName // Update navbar title
         timeLeft.text = String(gameTime) // Update time left title
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.counter), userInfo: nil, repeats: true) // create timer and start counting down as soon as the viw is loaded
-        
         setUpRandomArray()
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.counter), userInfo: nil, repeats: true) // create timer and start counting down as soon as the viw is loaded
         
         super.viewDidLoad()
     }
@@ -44,19 +46,34 @@ class Game: UIViewController {
         gameTime -= 1
         timeLeft.text = String(gameTime)
         
+        addDeleteBubble()
+        
+        if (gameTime == 0) { // stop timer when it reaches 0
+            timer.invalidate()
+            performSegue(withIdentifier: "GameOver", sender: self) // go to game over screen
+        }
+    }
+    
+    func addDeleteBubble() { // Create and delete bubbles every second
         
         let x = Int.random(in: minX...maxX)
         let y = Int.random(in: minY...maxY)
         let c = Int.random(in: 0...99)
         
-        var bubble = Bubble(x: x, y: y, colour: colours[c]) // create bubble with random coord
-        bubble.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
+        var bubbleButtons = Bubble(x: x, y: y, colour: colours[c], id: id) // create bubble with random coord
         
-        self.view.addSubview(bubble)
+        id += 1
         
-        if (gameTime == 0) { // stop timer when it reaches 0
-            timer.invalidate()
-            performSegue(withIdentifier: "GameOver", sender: self) // go to game over screen
+        bubbleButtons.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
+        
+        bubbleArray.append(bubbleButtons)
+        
+        addBubblesToView()
+    }
+    
+    func addBubblesToView() {
+        for i in bubbleArray {
+            self.view.addSubview(i)
         }
     }
     
@@ -72,7 +89,11 @@ class Game: UIViewController {
         score += bubble.points
         scoreLabel.text = String(score)
         
-        bubble.removeBubble()
+        for i in bubbleArray {
+            
+        }
+        
+        bubble.removeBubble() // remove bubble from view
     }
     
     func setUpRandomArray() { // set up random array to store colours with weights
