@@ -58,7 +58,6 @@ class Bubble: UIButton {
         self.setImage(UIImage(named: colour), for: .normal)
         self.clipsToBounds = true
         
-        pulsate()
     }
     
     func removeBubble() {
