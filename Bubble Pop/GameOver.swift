@@ -14,6 +14,10 @@ class GameOver: UIViewController {
     var finalName = ""
     
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    override func viewWillDisappear(_ animated: Bool) { // Function runs when the view dissapears so we save the score that the player got
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

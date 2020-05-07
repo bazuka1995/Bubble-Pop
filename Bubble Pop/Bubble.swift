@@ -57,9 +57,24 @@ class Bubble: UIButton {
         self.layer.cornerRadius = 0.5 * self.bounds.size.width // create a round button
         self.setImage(UIImage(named: colour), for: .normal)
         self.clipsToBounds = true
+        
+        pulsate()
     }
     
     func removeBubble() {
         self.removeFromSuperview()
+    }
+    
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.3
+        pulse.fromValue = 0.8
+        pulse.toValue = 1.0
+        pulse.autoreverses = true
+        pulse.repeatCount = 1
+        pulse.initialVelocity = 0.5
+        pulse.damping = 1.0
+        
+        layer.add(pulse, forKey: "pulse")
     }
 }
