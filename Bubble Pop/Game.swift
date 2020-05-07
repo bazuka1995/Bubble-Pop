@@ -37,6 +37,8 @@ class Game: UIViewController {
         
         setUpRandomArray()
         
+        addBubbles() // add first bubble before the timer has started
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.counter), userInfo: nil, repeats: true) // create timer and start counting down as soon as the viw is loaded
         
         super.viewDidLoad()
@@ -46,7 +48,8 @@ class Game: UIViewController {
         gameTime -= 1
         timeLeft.text = String(gameTime)
         
-        addDeleteBubble()
+        addBubbles()
+        removeBubbles()
         
         if (gameTime == 0) { // stop timer when it reaches 0
             timer.invalidate()
@@ -54,21 +57,45 @@ class Game: UIViewController {
         }
     }
     
-    func addDeleteBubble() { // Create and delete bubbles every second
+    func removeBubbles() { // Delete bubbles
+        let count = Int.random(in: 0...(bubbleArray.count-1)) // choose a random number of bubbles to remove from the screen
         
-        let x = Int.random(in: minX...maxX)
-        let y = Int.random(in: minY...maxY)
-        let c = Int.random(in: 0...99)
+        for _ in stride(from: 1, through: count, by: 1) {
+            let randomElement = bubbleArray.randomElement() // choose a random element to remove
+            bubbleArray.remove(at: getIndex(id: randomElement!.id))
+            randomElement!.removeBubble()
+        }
+    }
+    
+    func getIndex(id: Int) -> Int { // Find index of a bubble in the array
+        var index: Int = 0
+        for i in bubbleArray {
+            if id == i.id { // if the bubble id being passed in exists in the bubble array, return the index
+                return index
+            }
+            index += 1
+        }
+        return index
+    }
+    
+    func addBubbles() { // Create bubbles
+        let count = Int.random(in: 1...(maxBubble-bubbleArray.count)) // choose a random number of bubbles to add up to the maximum user preference
         
-        var bubbleButtons = Bubble(x: x, y: y, colour: colours[c], id: id) // create bubble with random coord
-        
-        id += 1
-        
-        bubbleButtons.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
-        
-        bubbleArray.append(bubbleButtons)
-        
-        addBubblesToView()
+        for _ in stride(from: 1, to: count, by: 1) { // add a random number of bubbles each second
+            let x = Int.random(in: minX...maxX)
+            let y = Int.random(in: minY...maxY)
+            let c = Int.random(in: 0...99)
+            
+            var bubbleButtons = Bubble(x: x, y: y, colour: colours[c], id: id) // create bubble with random coord
+            
+            id += 1
+            
+            bubbleButtons.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
+            
+            bubbleArray.append(bubbleButtons)
+            
+            addBubblesToView()
+        }
     }
     
     func addBubblesToView() {
@@ -89,8 +116,12 @@ class Game: UIViewController {
         score += bubble.points
         scoreLabel.text = String(score)
         
+        var index = 0
         for i in bubbleArray {
-            
+            if i.id == bubble.id { // find the bubble in the array that was clicked by comparing ids
+                bubbleArray.remove(at: index)
+            }
+            index += 1
         }
         
         bubble.removeBubble() // remove bubble from view

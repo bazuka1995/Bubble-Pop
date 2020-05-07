@@ -10,11 +10,6 @@ import UIKit
 
 class GameOver: UIViewController {
     
-    struct HighScores: Codable {
-        var name: String
-        var score: String
-    }
-    
     var finalScore = ""
     var finalName = ""
     
@@ -24,8 +19,6 @@ class GameOver: UIViewController {
         super.viewDidLoad()
         
         scoreLabel.text = finalScore
-        
-        let score = HighScores(name: finalName, score: finalScore) // score final score in the struct so that it can be saved to a file
         
         navigationItem.hidesBackButton = true // hide navigation bar back button
         
