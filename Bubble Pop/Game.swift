@@ -63,9 +63,11 @@ class Game: UIViewController {
         
         var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
-        highScores[finalName] = score // add to dictionary
-        
-        userDefaults.set(highScores, forKey: "allScores")
+        if score > highScores[finalName]! { // Only save score if its greater than the users high score
+            highScores[finalName] = score // add to dictionary
+            
+            userDefaults.set(highScores, forKey: "allScores")
+        }
     }
     
     func removeBubbles() { // Delete bubbles

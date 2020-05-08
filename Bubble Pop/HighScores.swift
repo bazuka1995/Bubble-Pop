@@ -26,7 +26,7 @@ class HighScores: UIViewController {
         let sortedScores = highScores.sorted { $0.1 > $1.1 } // Sort highscores in descending order by score
         
         for (name, score) in sortedScores {
-            score1.text = "\(name)'s score is \(score)"
+            print("\(name)'s score is \(score)")
         }
     }
 }
