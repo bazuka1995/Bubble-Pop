@@ -14,10 +14,6 @@ class GameOver: UIViewController {
     var finalName = ""
     
     @IBOutlet weak var scoreLabel: UILabel!
-    
-    override func viewWillDisappear(_ animated: Bool) { // Function runs when the view dissapears so we save the score that the player got
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +23,7 @@ class GameOver: UIViewController {
         navigationItem.hidesBackButton = true // hide navigation bar back button
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(self.goHome)) // create a new button that goes back to the new game screen
+        
     }
     
     @objc func goHome() {

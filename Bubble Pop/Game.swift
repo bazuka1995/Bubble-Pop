@@ -7,6 +7,7 @@
 //  Class for the game screen
 
 import UIKit
+import Foundation
 
 class Game: UIViewController {
     
@@ -55,6 +56,16 @@ class Game: UIViewController {
             timer.invalidate()
             performSegue(withIdentifier: "GameOver", sender: self) // go to game over screen
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) { // Function is run when view will dissapear
+        let userDefaults = UserDefaults.standard // access shared defaults object
+        
+        var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        
+        highScores[finalName] = score // add to dictionary
+        
+        userDefaults.set(highScores, forKey: "allScores")
     }
     
     func removeBubbles() { // Delete bubbles

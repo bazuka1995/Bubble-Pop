@@ -12,8 +12,17 @@ class HighScores: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userDefaults = UserDefaults.standard // access shared defaults object
+        
+        var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        
+        for (name, score) in highScores { // 
+            
+        }
+    }
 }
