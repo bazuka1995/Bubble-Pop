@@ -32,9 +32,15 @@ class Game: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel! // Score label
     
+    @IBOutlet weak var highScoreLabel: UILabel!
+    
     override func viewDidLoad() {
         welcomeNav.title = "Hello " + finalName // Update navbar title
         timeLeft.text = String(gameTime) // Update time left title
+        
+        let userDefaults = UserDefaults.standard // access shared defaults object
+        var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        highScoreLabel.text = String(highScores[finalName]!)
         
         setUpRandomArray()
         
