@@ -9,7 +9,9 @@
 import UIKit
 
 class HighScores: UIViewController {
-
+    
+    @IBOutlet weak var score1: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,10 +21,12 @@ class HighScores: UIViewController {
         
         let userDefaults = UserDefaults.standard // access shared defaults object
         
-        var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        let highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
-        for (name, score) in highScores { // 
-            
+        let sortedScores = highScores.sorted { $0.1 > $1.1 } // Sort highscores in descending order by score
+        
+        for (name, score) in sortedScores {
+            score1.text = "\(name)'s score is \(score)"
         }
     }
 }
