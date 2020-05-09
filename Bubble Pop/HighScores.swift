@@ -29,8 +29,9 @@ class HighScores: UIViewController {
             score1.text = "No highscores have been saved yet" // set placeholder text for when highscores is empty
         } else {
             score1.text = ""
+            score1.numberOfLines = 0
             for key in sortedScores {
-                score1.text! += "\(key.key) got a high score of \(key.value) \n"
+                score1.text! += "\(key.key) got a high score of \(key.value) \n \n"
             }
         }
         
