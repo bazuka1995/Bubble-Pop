@@ -25,8 +25,14 @@ class HighScores: UIViewController {
         
         let sortedScores = highScores.sorted { $0.1 > $1.1 } // Sort highscores in descending order by score
         
-        for (name, score) in sortedScores {
-            print("\(name)'s score is \(score)")
+        if (sortedScores.isEmpty) {
+            score1.text = "No highscores have been saved yet" // set placeholder text for when highscores is empty
+        } else {
+            score1.text = ""
+            for key in sortedScores {
+                score1.text! += "\(key.key) got a high score of \(key.value) \n"
+            }
         }
+        
     }
 }

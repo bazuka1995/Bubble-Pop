@@ -40,7 +40,12 @@ class Game: UIViewController {
         
         let userDefaults = UserDefaults.standard // access shared defaults object
         var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
-        highScoreLabel.text = String(highScores[finalName]!)
+        
+        if (highScores[finalName] != nil) { // check to see that the users highscore has been saved before
+            highScoreLabel.text = String(highScores[finalName]!)
+        } else {
+            highScoreLabel.text = "---"
+        }
         
         setUpRandomArray()
         
@@ -69,8 +74,14 @@ class Game: UIViewController {
         
         var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
-        if score > highScores[finalName]! { // Only save score if its greater than the users high score
-            highScores[finalName] = score // add to dictionary
+        if highScores[finalName] != nil { // Check to see if the users high score has been saved before
+            if (score > highScores[finalName]!) { // Only save the highest score
+                highScores[finalName] = score // add to dictionary
+                
+                userDefaults.set(highScores, forKey: "allScores")
+            }
+        } else { // otherwise, if highscore is nil, then save the first high score
+            highScores[finalName] = score // since highscores is empty just add high score to dictionary
             
             userDefaults.set(highScores, forKey: "allScores")
         }
