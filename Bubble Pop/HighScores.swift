@@ -31,7 +31,7 @@ class HighScores: UIViewController {
             score1.text = ""
             score1.numberOfLines = 0
             for key in sortedScores {
-                score1.text! += "\(key.key) got a high score of \(key.value) \n \n"
+                score1.text! += "\(key.key)'s high score is \(key.value) \n \n"
             }
         }
         

@@ -39,7 +39,7 @@ class Game: UIViewController {
         timeLeft.text = String(gameTime) // Update time left title
         
         let userDefaults = UserDefaults.standard // access shared defaults object
-        var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        let highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
         if (highScores[finalName] != nil) { // check to see that the users highscore has been saved before
             highScoreLabel.text = String(highScores[finalName]!)
@@ -60,8 +60,8 @@ class Game: UIViewController {
         gameTime -= 1
         timeLeft.text = String(gameTime)
         
-        addBubbles()
         removeBubbles()
+        addBubbles()
         
         if (gameTime == 0) { // stop timer when it reaches 0
             timer.invalidate()
@@ -88,12 +88,14 @@ class Game: UIViewController {
     }
     
     func removeBubbles() { // Delete bubbles
-        let count = Int.random(in: 0...(bubbleArray.count-1)) // choose a random number of bubbles to remove from the screen
-        
-        for _ in stride(from: 1, through: count, by: 1) {
-            let randomElement = bubbleArray.randomElement() // choose a random element to remove
-            bubbleArray.remove(at: getIndex(id: randomElement!.id))
-            randomElement!.removeBubble()
+        if (bubbleArray.count > 2) { // make sure not to remove bubbles if there arent any on the screen
+            let count = Int.random(in: 0...(bubbleArray.count-1)) // choose a random number of bubbles to remove from the screen
+                
+            for _ in stride(from: 1, through: count, by: 1) {
+                let randomElement = bubbleArray.randomElement() // choose a random element to remove
+                bubbleArray.remove(at: getIndex(id: randomElement!.id)) // remove bubble from array
+                randomElement!.removeBubble() // remove bubble from screen
+            }
         }
     }
     
@@ -111,21 +113,39 @@ class Game: UIViewController {
     func addBubbles() { // Create bubbles
         let count = Int.random(in: 1...(maxBubble-bubbleArray.count)) // choose a random number of bubbles to add up to the maximum user preference
         
+        var bubbleButtons: Bubble
+        
         for _ in stride(from: 1, to: count, by: 1) { // add a random number of bubbles each second
-            let x = Int.random(in: minX...maxX)
-            let y = Int.random(in: minY...maxY)
-            let c = Int.random(in: 0...99)
+            repeat {
             
-            var bubbleButtons = Bubble(x: x, y: y, colour: colours[c], id: id) // create bubble with random coord
+                let x = Int.random(in: minX...maxX)
+                let y = Int.random(in: minY...maxY)
+                let c = Int.random(in: 0...99)
+                    
+                bubbleButtons = Bubble(x: x, y: y, colour: colours[c], id: id) // create bubble with random coord
+            
+            } while checkOverlap(bubble: bubbleButtons)
             
             id += 1
-            
+                    
             bubbleButtons.addTarget(self, action: #selector(self.updateScore), for: .touchUpInside) // add action to button when pressed
             
             bubbleArray.append(bubbleButtons)
-            
-            addBubblesToView()
         }
+        addBubblesToView()
+    }
+    
+    func checkOverlap(bubble: Bubble) -> Bool { // check for button overlap before adding to bubble array
+        
+        for element in bubbleArray {
+            let x = max(bubble.x, element.x) - min(bubble.x, element.x)
+            let y = max(bubble.y, element.y) - min(bubble.y, element.y)
+            
+            if (x < 50 && y < 50) {
+                return true
+            }
+        }
+        return false
     }
     
     func addBubblesToView() {
