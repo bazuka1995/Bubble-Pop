@@ -8,11 +8,18 @@
 
 import UIKit
 
-class StartGame: UIViewController {
+class StartGame: UIViewController, UITextFieldDelegate {
     
     var seconds = 60 // default game time
     var name = ""
     var maxBubbles = 15 // default max number of bubble
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        nameField.resignFirstResponder()
+        
+        return true
+    }
     
     @IBAction func startGame(_ sender: Any) {
         name = nameField.text!
@@ -58,6 +65,25 @@ class StartGame: UIViewController {
         startButton.isEnabled = false // start with disabled button until user enters name
         
         nameField.addTarget(self, action: #selector(self.validateName), for: .editingChanged) // add target to namefield so that the name can be validated
+        
+        nameField.delegate = self
+        
+        let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
+        
+        // create an empty space on the left side so that the done button is on the right
+        let flexspace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneBtnAction))
+        
+        toolbar.setItems([flexspace, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        // set toolbar as accessory view to keyboard
+        nameField.inputAccessoryView = toolbar
+    }
+    
+    @objc func doneBtnAction() {
+        self.view.endEditing(true)
     }
     
     @objc func validateName() { // validate name field to make sure its between 2-15 characters. Disable button for invalid name
