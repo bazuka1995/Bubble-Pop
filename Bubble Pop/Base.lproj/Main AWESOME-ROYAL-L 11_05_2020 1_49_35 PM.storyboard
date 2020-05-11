@@ -167,8 +167,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXO-jQ-0Xd">
-                                <rect key="frame" x="20" y="140" width="89" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-pQ-f4v">
+                                <rect key="frame" x="20" y="103" width="96" height="29"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXO-jQ-0Xd">
+                                <rect key="frame" x="55" y="140" width="26" height="29"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -185,32 +191,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-9c-5de">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-9c-5de">
                                 <rect key="frame" x="279" y="103" width="115" height="29"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-2h-rX0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-2h-rX0">
                                 <rect key="frame" x="279" y="140" width="115" height="29"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNj-fD-Lpl">
-                                <rect key="frame" x="116" y="107" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky3-D8-QA0">
-                                <rect key="frame" x="229" y="106" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-pQ-f4v">
-                                <rect key="frame" x="20" y="103" width="88.5" height="29"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -219,22 +207,12 @@
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="65Y-9B-ikE" firstAttribute="centerX" secondItem="fuL-iC-Aep" secondAttribute="centerX" id="0cY-9o-cRJ"/>
-                            <constraint firstItem="hXO-jQ-0Xd" firstAttribute="leading" secondItem="RTj-jA-fB5" secondAttribute="leading" constant="20" id="5JY-oi-Yh3"/>
-                            <constraint firstItem="ky3-D8-QA0" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="18" id="6mP-70-8x0"/>
-                            <constraint firstItem="YDZ-9c-5de" firstAttribute="leading" secondItem="ky3-D8-QA0" secondAttribute="trailing" constant="8" id="Eck-p9-Y94"/>
-                            <constraint firstItem="sj4-pQ-f4v" firstAttribute="leading" secondItem="RTj-jA-fB5" secondAttribute="leading" constant="20" id="S9L-Ns-Uda"/>
                             <constraint firstItem="sj4-pQ-f4v" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="T59-yf-N26"/>
-                            <constraint firstItem="f4g-2h-rX0" firstAttribute="leading" secondItem="ky3-D8-QA0" secondAttribute="trailing" constant="8" id="Zgr-rs-Hvf"/>
-                            <constraint firstItem="RTj-jA-fB5" firstAttribute="trailing" secondItem="f4g-2h-rX0" secondAttribute="trailing" constant="20" id="bXU-MJ-26E"/>
-                            <constraint firstItem="LNj-fD-Lpl" firstAttribute="leading" secondItem="hXO-jQ-0Xd" secondAttribute="trailing" constant="7" id="cA9-oN-j3p"/>
                             <constraint firstItem="hXO-jQ-0Xd" firstAttribute="top" secondItem="sj4-pQ-f4v" secondAttribute="bottom" constant="8" id="cqz-hg-3Bz"/>
                             <constraint firstItem="f4g-2h-rX0" firstAttribute="top" secondItem="YDZ-9c-5de" secondAttribute="bottom" constant="8" id="cxX-An-8zN"/>
-                            <constraint firstItem="RTj-jA-fB5" firstAttribute="trailing" secondItem="YDZ-9c-5de" secondAttribute="trailing" constant="20" id="eJF-Dp-t9j"/>
-                            <constraint firstItem="LNj-fD-Lpl" firstAttribute="leading" secondItem="sj4-pQ-f4v" secondAttribute="trailing" constant="7.5" id="fXP-kd-WMS"/>
                             <constraint firstItem="65Y-9B-ikE" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="lfT-Bz-vUb"/>
                             <constraint firstItem="rvB-NJ-ZhC" firstAttribute="centerX" secondItem="fuL-iC-Aep" secondAttribute="centerX" id="odC-Gt-7MK"/>
                             <constraint firstItem="rvB-NJ-ZhC" firstAttribute="top" secondItem="65Y-9B-ikE" secondAttribute="bottom" constant="8" id="qt6-pl-olm"/>
-                            <constraint firstItem="LNj-fD-Lpl" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="19" id="vou-kg-Pm4"/>
                             <constraint firstItem="YDZ-9c-5de" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="zue-Ae-tcW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RTj-jA-fB5"/>
@@ -312,42 +290,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-3p-XsV">
-                                <rect key="frame" x="124.5" y="133" width="165" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-3p-XsV">
+                                <rect key="frame" x="125" y="134" width="165" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your got a score of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7io-y1-sW2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your got a score of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7io-y1-sW2">
                                 <rect key="frame" x="109" y="278" width="196" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-Z4-SOc">
-                                <rect key="frame" x="200.5" y="315" width="13" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-Z4-SOc">
+                                <rect key="frame" x="109" y="315" width="196" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ma-1k-GPe">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="1ma-1k-GPe" firstAttribute="top" secondItem="RuP-Z4-SOc" secondAttribute="bottom" constant="93.5" id="0bF-dz-h3g"/>
-                            <constraint firstItem="7U8-3p-XsV" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="16K-pv-leJ"/>
-                            <constraint firstItem="RuP-Z4-SOc" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="Gv9-WJ-56u"/>
-                            <constraint firstItem="1ma-1k-GPe" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="H2T-73-MaZ"/>
-                            <constraint firstItem="RuP-Z4-SOc" firstAttribute="top" secondItem="7io-y1-sW2" secondAttribute="bottom" constant="8" id="Xvi-8j-9AH"/>
-                            <constraint firstItem="7U8-3p-XsV" firstAttribute="top" secondItem="SXq-0k-v57" secondAttribute="top" constant="45" id="YYZ-hs-TTn"/>
-                            <constraint firstItem="1ma-1k-GPe" firstAttribute="centerY" secondItem="Yhs-DE-uKg" secondAttribute="centerY" id="jAX-h0-OvV"/>
-                            <constraint firstItem="7io-y1-sW2" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="oOm-b2-Fdb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SXq-0k-v57"/>
                     </view>
                     <navigationItem key="navigationItem" id="TQb-eP-LFD"/>
@@ -381,6 +346,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="eQx-ii-knr"/>
         <segue reference="IKV-su-t7Y"/>
     </inferredMetricsTieBreakers>
 </document>

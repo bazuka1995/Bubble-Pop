@@ -312,42 +312,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-3p-XsV">
-                                <rect key="frame" x="124.5" y="133" width="165" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-3p-XsV">
+                                <rect key="frame" x="125" y="134" width="165" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your got a score of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7io-y1-sW2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your got a score of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7io-y1-sW2">
                                 <rect key="frame" x="109" y="278" width="196" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-Z4-SOc">
-                                <rect key="frame" x="200.5" y="315" width="13" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-Z4-SOc">
+                                <rect key="frame" x="109" y="315" width="196" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="23"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ma-1k-GPe">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="1ma-1k-GPe" firstAttribute="top" secondItem="RuP-Z4-SOc" secondAttribute="bottom" constant="93.5" id="0bF-dz-h3g"/>
-                            <constraint firstItem="7U8-3p-XsV" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="16K-pv-leJ"/>
-                            <constraint firstItem="RuP-Z4-SOc" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="Gv9-WJ-56u"/>
-                            <constraint firstItem="1ma-1k-GPe" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="H2T-73-MaZ"/>
-                            <constraint firstItem="RuP-Z4-SOc" firstAttribute="top" secondItem="7io-y1-sW2" secondAttribute="bottom" constant="8" id="Xvi-8j-9AH"/>
-                            <constraint firstItem="7U8-3p-XsV" firstAttribute="top" secondItem="SXq-0k-v57" secondAttribute="top" constant="45" id="YYZ-hs-TTn"/>
-                            <constraint firstItem="1ma-1k-GPe" firstAttribute="centerY" secondItem="Yhs-DE-uKg" secondAttribute="centerY" id="jAX-h0-OvV"/>
-                            <constraint firstItem="7io-y1-sW2" firstAttribute="centerX" secondItem="Yhs-DE-uKg" secondAttribute="centerX" id="oOm-b2-Fdb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SXq-0k-v57"/>
                     </view>
                     <navigationItem key="navigationItem" id="TQb-eP-LFD"/>
@@ -381,6 +368,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="cAs-vP-X1l"/>
         <segue reference="IKV-su-t7Y"/>
     </inferredMetricsTieBreakers>
 </document>
