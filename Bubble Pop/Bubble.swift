@@ -19,7 +19,7 @@ class Bubble: UIButton {
     var colour: String
     var id: Int
     
-    init(x: Int, y: Int, colour: String, id: Int) {
+    init(x: Int, y: Int, colour: String, id: Int) { // set the parameters of the bubble
         self.x = x
         self.y = y
         self.width = 50
@@ -45,7 +45,7 @@ class Bubble: UIButton {
         
         super.init(frame: .zero)
         
-        createBubble() // create a bubble button straight away after it is called
+        createBubble() // create a bubble button after parameters are set
     }
     
     required init?(coder: NSCoder) {
@@ -62,18 +62,5 @@ class Bubble: UIButton {
     
     func removeBubble() {
         self.removeFromSuperview()
-    }
-    
-    func pulsate() {
-        let pulse = CASpringAnimation(keyPath: "transform.scale")
-        pulse.duration = 0.3
-        pulse.fromValue = 0.8
-        pulse.toValue = 1.0
-        pulse.autoreverses = true
-        pulse.repeatCount = 1
-        pulse.initialVelocity = 0.5
-        pulse.damping = 1.0
-        
-        layer.add(pulse, forKey: "pulse")
     }
 }

@@ -19,9 +19,9 @@ class Game: UIViewController {
     var screenWidth = UInt32(UIScreen.main.bounds.width)
     var screenHeight = UInt32(UIScreen.main.bounds.height)
     var minX = 20 // Min and max x and y coordinates
-    var maxX = 348 // for buttons
+    var maxX = Int(0.84 * screenWidth) //348 // for buttons
     var minY = 177
-    var maxY = 832
+    var maxY = Int(0.92 * screenHeight) //832
     var run = false // stores whether the game timer is 1 second less than the user set game time
     var id = 1 // Store unique id of each bubble button
     
@@ -37,8 +37,6 @@ class Game: UIViewController {
     @IBOutlet weak var highScoreLabel: UILabel!
     
     override func viewDidLoad() {
-        setMaxCoord(name: String(UIDevice.current.name))
-        
         welcomeNav.title = "Hello " + finalName // Update navbar title
         timeLeft.text = String(gameTime) // Update time left title
         
@@ -57,17 +55,10 @@ class Game: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.counter), userInfo: nil, repeats: true) // create timer and start counting down as soon as the viw is loaded
         
-        super.viewDidLoad()
-    }
-    
-    func setMaxCoord(name: String) { // Set the maximum coordinates a bubble can reach dynamically
-        maxX = Int(0.85 * Double(screenWidth))
+        //print("\(String(screenWidth)), \(String(screenHeight))")
+        //print(UIDevice.current.name)
         
-        if (name == "iPhone 11 Pro Max" || name == "iPhone 11 Pro" || name == "iPhone 11") { // Since these phones dont have a home button, some of the screen real estate is taken up by the on screen home button so the maximum coordinates are less than if the iphone had a physical home button
-            maxY = Int(0.85 * Double(screenHeight))
-        } else {
-            maxY = Int(0.92 * Double(screenHeight))
-        }
+        super.viewDidLoad()
     }
     
     @objc func counter() { // update timer every 1 sec
