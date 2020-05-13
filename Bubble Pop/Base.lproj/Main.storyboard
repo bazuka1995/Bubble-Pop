@@ -312,7 +312,7 @@
                                 <rect key="frame" x="-53" y="-14" width="519" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="High Scores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Et1-m2-DnD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Scores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Et1-m2-DnD">
                                 <rect key="frame" x="98.5" y="97" width="217.5" height="46"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,8 +324,8 @@
                                 <color key="textColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-R5-q2N">
-                                <rect key="frame" x="20" y="157" width="374" height="273"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-R5-q2N">
+                                <rect key="frame" x="207" y="157" width="0.0" height="273"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -333,12 +333,12 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="Et1-m2-DnD" firstAttribute="top" secondItem="jsV-KI-69y" secondAttribute="top" multiplier="1.1" id="9tF-7W-5rn"/>
-                            <constraint firstItem="zF4-R5-q2N" firstAttribute="leading" secondItem="jsV-KI-69y" secondAttribute="leading" constant="20" id="Dve-Cx-rf7"/>
+                            <constraint firstItem="zF4-R5-q2N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jsV-KI-69y" secondAttribute="leading" id="Dve-Cx-rf7"/>
                             <constraint firstItem="kg8-2E-QEd" firstAttribute="centerY" secondItem="cvB-CE-uH5" secondAttribute="centerY" id="JXr-Wu-ohH"/>
                             <constraint firstItem="zF4-R5-q2N" firstAttribute="top" secondItem="Et1-m2-DnD" secondAttribute="bottom" constant="14" id="SAz-iX-6wm"/>
                             <constraint firstItem="kg8-2E-QEd" firstAttribute="top" secondItem="zF4-R5-q2N" secondAttribute="bottom" constant="7.5" id="TmW-vO-6Te"/>
                             <constraint firstItem="kg8-2E-QEd" firstAttribute="centerX" secondItem="cvB-CE-uH5" secondAttribute="centerX" id="VVc-0c-Qy7"/>
-                            <constraint firstItem="jsV-KI-69y" firstAttribute="trailing" secondItem="zF4-R5-q2N" secondAttribute="trailing" constant="20" id="YZs-U0-8aC"/>
+                            <constraint firstItem="jsV-KI-69y" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zF4-R5-q2N" secondAttribute="trailing" id="YZs-U0-8aC"/>
                             <constraint firstItem="kg8-2E-QEd" firstAttribute="top" secondItem="zF4-R5-q2N" secondAttribute="bottom" constant="7.5" id="btE-1e-UAD"/>
                             <constraint firstItem="Et1-m2-DnD" firstAttribute="centerX" secondItem="cvB-CE-uH5" secondAttribute="centerX" id="nHk-8O-r4x"/>
                             <constraint firstItem="zF4-R5-q2N" firstAttribute="centerX" secondItem="cvB-CE-uH5" secondAttribute="centerX" id="tGV-vy-AWd"/>
@@ -434,7 +434,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eQx-ii-knr"/>
         <segue reference="IKV-su-t7Y"/>
     </inferredMetricsTieBreakers>
     <resources>
