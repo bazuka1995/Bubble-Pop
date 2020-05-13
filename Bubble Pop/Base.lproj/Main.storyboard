@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" fixedFrame="YES" image="Main Menu Background" translatesAutoresizingMaskIntoConstraints="NO" id="U1B-2g-2h8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" image="Main Menu Background" translatesAutoresizingMaskIntoConstraints="NO" id="U1B-2g-2h8">
                                 <rect key="frame" x="-53" y="-13" width="519" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -281,16 +281,27 @@
                                 <rect key="frame" x="-53" y="-14" width="519" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you play Bubble Pop?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-J3-y5B">
-                                <rect key="frame" x="10.5" y="138" width="393.5" height="34"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-VY-O1T">
+                                <rect key="frame" x="20" y="205" width="374" height="417"/>
+                                <mutableString key="text">In this game, a number of bubbles are randomly displayed on the screen. The aim of the game is to pop as many bubbles as possible. Bubbles come in five colours: Red, Purple, Green, Blue and Brown. Each colour corresponds to a specific number of points and has a specific probability of appearing. Note that if you pop two or more bubbles of the same colour consecutively, they earn 1.5 times the points for the additional bubbles they pop. After the game has finished, if your score is higher than your previous high score, it will be saved and displayed in the High Scores section.</mutableString>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you play Bubble Pop?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-ve-H29">
+                                <rect key="frame" x="46.5" y="128" width="321" height="27"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dg3-J3-y5B" firstAttribute="centerX" secondItem="9sI-v4-LdC" secondAttribute="centerX" id="5rd-4M-g19"/>
-                            <constraint firstItem="dg3-J3-y5B" firstAttribute="top" secondItem="rIr-fk-jgy" secondAttribute="top" constant="50" id="rbv-zE-keL"/>
+                            <constraint firstItem="MNH-ve-H29" firstAttribute="centerX" secondItem="9sI-v4-LdC" secondAttribute="centerX" id="7If-b4-2y2"/>
+                            <constraint firstItem="DWf-VY-O1T" firstAttribute="centerX" secondItem="9sI-v4-LdC" secondAttribute="centerX" id="Me3-7X-Gac"/>
+                            <constraint firstItem="DWf-VY-O1T" firstAttribute="top" secondItem="MNH-ve-H29" secondAttribute="bottom" constant="50" id="QsW-UY-pHe"/>
+                            <constraint firstItem="DWf-VY-O1T" firstAttribute="leading" secondItem="rIr-fk-jgy" secondAttribute="leading" constant="20" id="Y8G-eF-VPu"/>
+                            <constraint firstItem="MNH-ve-H29" firstAttribute="top" secondItem="rIr-fk-jgy" secondAttribute="top" constant="40" id="Zz2-0k-ROH"/>
+                            <constraint firstItem="rIr-fk-jgy" firstAttribute="trailing" secondItem="DWf-VY-O1T" secondAttribute="trailing" constant="20" id="fPf-rK-z2H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rIr-fk-jgy"/>
                     </view>
@@ -298,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhW-xk-mEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="1006"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="1005.8035714285713"/>
         </scene>
         <!--High Scores-->
         <scene sceneID="Lt4-md-Kak">
@@ -434,6 +445,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="jjV-Dg-in3"/>
         <segue reference="IKV-su-t7Y"/>
     </inferredMetricsTieBreakers>
     <resources>
