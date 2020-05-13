@@ -10,7 +10,7 @@ import UIKit
 
 class Bubble: UIButton {
     
-    var points: Int // how many points a user will get when pressing the button
+    var points: Double // how many points a user will get when pressing the button
     var x: Int
     var y: Int
     var width: Int
@@ -30,17 +30,17 @@ class Bubble: UIButton {
         
         switch colour { // set the number of points based on bubble colour
         case "Red.png":
-            self.points = 1
+            self.points = 1.0
         case "Purple.png":
-            self.points = 2
+            self.points = 2.0
         case "Green.png":
-            self.points = 5
+            self.points = 5.0
         case "Blue.png":
-            self.points = 8
+            self.points = 8.0
         case "Brown.png":
-            self.points = 10
+            self.points = 10.0
         default:
-            self.points = 1
+            self.points = 1.0
         }
         
         super.init(frame: .zero)

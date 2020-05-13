@@ -15,7 +15,7 @@ class Game: UIViewController {
     var gameTime = 60 // Game time passed in from startgame viewcontroller
     var maxBubble = 15 // Maximum number of bubbles on the screen
     var timer = Timer() // Timer function
-    var score: Double = 0.0 // player score
+    var score = 0 // player score
     var screenWidth = UInt32(UIScreen.main.bounds.width)
     var screenHeight = UInt32(UIScreen.main.bounds.height)
     var minX = 20 // Min and max x and y coordinates
@@ -87,7 +87,7 @@ class Game: UIViewController {
     override func viewWillDisappear(_ animated: Bool) { // Function is run when view will dissapear
         let userDefaults = UserDefaults.standard // access shared defaults object
         
-        var highScores: [String:Double] = userDefaults.object(forKey: "allScores") as? [String:Double] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        var highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
         if highScores[finalName] != nil { // Check to see if the users high score has been saved before
             if (score > highScores[finalName]!) { // Only save the highest score
@@ -178,24 +178,13 @@ class Game: UIViewController {
     }
     
     @objc func updateScore(bubble: Bubble) { // update the score when a button is pressed
-        if (lastBubble.count < 1) { // check if user has pressed more than 2 bubbles
+        if (lastBubble.count <= 1) { // check if user has pressed more than 2 bubbles
             lastBubble.append(bubble.colour)
             
             score += bubble.points
             scoreLabel.text = String(score)
         } else {
-            lastBubble.append(bubble.colour) // add the colour of the that was most recently pressed
-            
-            if (lastBubble[0] == lastBubble[1]) { // if there are two of the same bubble colours pressed in sequence, add 50% to the score
-                score += (bubble.points * 1.5)
-                scoreLabel.text = String(score)
-            } else {
-                score += bubble.points
-                scoreLabel.text = String(score)
-            }
-            
-            lastBubble[0] = lastBubble[1] // after adding the score, move the most recent button colour to the previous button press
-            lastBubble.remove(at: 1)
+            bubble.append
         }
         
         var index = 0
