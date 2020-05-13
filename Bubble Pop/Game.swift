@@ -186,7 +186,7 @@ class Game: UIViewController {
         } else {
             lastBubble.append(bubble.colour) // add the colour of the that was most recently pressed
             
-            if (lastBubble[0] == lastBubble[1]) { // if there are two of the same bubble colours pressed in sequence, add 50% to the score
+            if (lastBubble[0] == lastBubble[1]) { // if there are two of the same bubble colours pressed consecutively, add 50% to the score
                 score += (bubble.points * 1.5)
                 scoreLabel.text = String(score)
             } else {
