@@ -9,11 +9,15 @@
 import UIKit
 
 class NewGame: UIViewController {
-
+    
+    @IBOutlet weak var titleButton: DesignableButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.hidesBackButton = true // hide navbar back button
+        
+        titleButton.isUserInteractionEnabled = false // disable clickable button
     }
 
 }

@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-qT-VuV" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="77" y="389" width="260" height="119"/>
+                                <rect key="frame" x="77" y="388" width="260" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p2i-qT-VuV" secondAttribute="height" multiplier="260:119" id="SbD-sR-nK0"/>
                                 </constraints>
@@ -143,6 +143,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="W0P-CN-6ax"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="titleButton" destination="FEk-KH-pHZ" id="Z8i-dh-SjR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
