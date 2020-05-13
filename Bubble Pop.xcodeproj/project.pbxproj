@@ -24,6 +24,7 @@
 		96A47344246B9A3C0089A38F /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A47343246B9A3C0089A38F /* Instructions.swift */; };
 		96B45DFB2460E96E001E927A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B45DFA2460E96E001E927A /* Bubble.swift */; };
 		96CAE93D246A3CE7004B2A1D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAE93C246A3CE7004B2A1D /* UIButtonExtension.swift */; };
+		96D02EF4246BBFCA00B8070B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D02EF3246BBFCA00B8070B /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		96A47343246B9A3C0089A38F /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		96B45DFA2460E96E001E927A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		96CAE93C246A3CE7004B2A1D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		96D02EF3246BBFCA00B8070B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				96209616245FB5410006BDD0 /* LaunchScreen.storyboard */,
 				96209619245FB5410006BDD0 /* Info.plist */,
 				96CAE93C246A3CE7004B2A1D /* UIButtonExtension.swift */,
+				96D02EF3246BBFCA00B8070B /* UIViewExtension.swift */,
 			);
 			path = "Bubble Pop";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				9620963E245FBBBC0006BDD0 /* NewGame.swift in Sources */,
 				96209640245FBBEF0006BDD0 /* HighScores.swift in Sources */,
 				9620963C245FB9610006BDD0 /* MainNavigationController.swift in Sources */,
+				96D02EF4246BBFCA00B8070B /* UIViewExtension.swift in Sources */,
 				9620960E245FB5410006BDD0 /* SceneDelegate.swift in Sources */,
 				96A47344246B9A3C0089A38F /* Instructions.swift in Sources */,
 				96209644245FBCA70006BDD0 /* Game.swift in Sources */,

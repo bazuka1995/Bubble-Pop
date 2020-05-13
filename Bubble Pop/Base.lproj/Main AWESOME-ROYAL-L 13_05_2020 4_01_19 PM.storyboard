@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-qT-VuV" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="77" y="389" width="260" height="119"/>
+                                <rect key="frame" x="77" y="388.5" width="260" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p2i-qT-VuV" secondAttribute="height" multiplier="260:119" id="SbD-sR-nK0"/>
                                 </constraints>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEk-KH-pHZ" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="-185" y="118" width="784" height="190.5"/>
+                                <rect key="frame" x="-185" y="138" width="784" height="190.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FEk-KH-pHZ" secondAttribute="height" multiplier="70:17" id="GX2-yH-0c0"/>
                                 </constraints>
@@ -133,7 +133,7 @@
                             <constraint firstItem="p2i-qT-VuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Scx-mW-FSO"/>
                             <constraint firstItem="p2i-qT-VuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U6k-iV-2Lf"/>
                             <constraint firstItem="gy6-G0-EUL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="hEG-tf-mFv"/>
-                            <constraint firstItem="FEk-KH-pHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="oHD-vn-uhQ"/>
+                            <constraint firstItem="FEk-KH-pHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="oHD-vn-uhQ"/>
                             <constraint firstItem="p2i-qT-VuV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="vun-Rb-hG3"/>
                             <constraint firstItem="YuL-TI-O5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="yFl-pu-AW2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YuL-TI-O5T" secondAttribute="trailing" constant="77" id="zBw-Dl-CT9"/>
@@ -368,7 +368,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-VY-O1T" customClass="DesignableLabel" customModule="Bubble_Pop" customModuleProvider="target">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-VY-O1T" customClass="DesignableLabel" customModule="Bubble_Pop" customModuleProvider="target">
                                 <rect key="frame" x="20" y="230" width="374" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="0.70601455479452058" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">In this game, a number of bubbles are randomly displayed on the screen. The aim of the game is to pop as many bubbles as possible. Bubbles come in five colours: Red, Purple, Green, Blue and Brown. Each colour corresponds to a specific number of points and has a specific probability of appearing. Note that if you pop two or more bubbles of the same colour consecutively, they earn 1.5 times the points for the additional bubbles they pop. After the game has finished, if your score is higher than your previous high score, it will be saved and displayed in the High Scores section.</string>

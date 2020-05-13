@@ -15,129 +15,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" fixedFrame="YES" image="Main Menu Background" translatesAutoresizingMaskIntoConstraints="NO" id="VIi-d7-fez">
-                                <rect key="frame" x="-53" y="-14" width="519" height="923"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" image="Main Menu Background" translatesAutoresizingMaskIntoConstraints="NO" id="U1B-2g-2h8">
+                                <rect key="frame" x="-53" y="-13" width="519" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy6-G0-EUL" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="77" y="641.5" width="260" height="119"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gy6-G0-EUL" secondAttribute="height" multiplier="260:119" id="tKN-to-od8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="26"/>
-                                <state key="normal" title="Instructions" backgroundImage="Blue Stroke">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="5" height="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="zgx-fF-yra" kind="show" id="WG5-pw-lyt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-qT-VuV" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="77" y="389" width="260" height="119"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="p2i-qT-VuV" secondAttribute="height" multiplier="260:119" id="SbD-sR-nK0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="26"/>
-                                <state key="normal" title="New Game" backgroundImage="Red Stroke">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="5" height="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="1WP-hP-A8G" kind="show" identifier="StartGame" id="jjV-Dg-in3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuL-TI-O5T" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="77" y="516" width="260" height="117"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="YuL-TI-O5T" secondAttribute="height" multiplier="20:9" id="KgT-SU-sAQ"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuL-TI-O5T">
+                                <rect key="frame" x="-75.5" y="353" width="565" height="190.5"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="26"/>
                                 <state key="normal" title="High Score" backgroundImage="Green Stroke">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="5" height="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="mUg-C8-QfS" kind="show" identifier="HighScore" id="nur-rJ-xkE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEk-KH-pHZ" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="-185" y="118" width="784" height="190.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FEk-KH-pHZ" secondAttribute="height" multiplier="70:17" id="GX2-yH-0c0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="45"/>
-                                <state key="normal" title="Bubble Pop" backgroundImage="Orange Stroke">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy6-G0-EUL">
+                                <rect key="frame" x="-75.5" y="543.5" width="565" height="190.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="26"/>
+                                <state key="normal" title="Instructions" backgroundImage="Blue Stroke">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="9"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="zgx-fF-yra" kind="show" id="WG5-pw-lyt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-qT-VuV">
+                                <rect key="frame" x="-75.5" y="162.5" width="565" height="190.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="26"/>
+                                <state key="normal" title="New Game" backgroundImage="Red Stroke">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1WP-hP-A8G" kind="show" identifier="StartGame" id="jjV-Dg-in3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="YuL-TI-O5T" firstAttribute="top" secondItem="p2i-qT-VuV" secondAttribute="bottom" constant="8.5" id="698-wz-KvZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gy6-G0-EUL" secondAttribute="trailing" constant="77" id="87J-DF-4SJ"/>
-                            <constraint firstItem="FEk-KH-pHZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdl-bX-MNv"/>
-                            <constraint firstItem="gy6-G0-EUL" firstAttribute="top" secondItem="YuL-TI-O5T" secondAttribute="bottom" constant="8.5" id="IIT-kb-kzk"/>
-                            <constraint firstItem="p2i-qT-VuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Scx-mW-FSO"/>
-                            <constraint firstItem="p2i-qT-VuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U6k-iV-2Lf"/>
-                            <constraint firstItem="gy6-G0-EUL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="hEG-tf-mFv"/>
-                            <constraint firstItem="FEk-KH-pHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="oHD-vn-uhQ"/>
-                            <constraint firstItem="p2i-qT-VuV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="vun-Rb-hG3"/>
-                            <constraint firstItem="YuL-TI-O5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="yFl-pu-AW2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YuL-TI-O5T" secondAttribute="trailing" constant="77" id="zBw-Dl-CT9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p2i-qT-VuV" secondAttribute="trailing" constant="77" id="zNT-re-pBo"/>
+                            <constraint firstItem="YuL-TI-O5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2af-Ad-VTJ"/>
+                            <constraint firstItem="gy6-G0-EUL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AJF-be-LnI"/>
+                            <constraint firstItem="YuL-TI-O5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q88-zo-aUM"/>
+                            <constraint firstItem="p2i-qT-VuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vgd-24-Ch0"/>
+                            <constraint firstItem="YuL-TI-O5T" firstAttribute="top" secondItem="p2i-qT-VuV" secondAttribute="bottom" id="jb4-r5-A4G"/>
+                            <constraint firstItem="gy6-G0-EUL" firstAttribute="top" secondItem="YuL-TI-O5T" secondAttribute="bottom" id="jew-AS-B2G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -362,44 +281,27 @@
                                 <rect key="frame" x="-53" y="-14" width="519" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-VY-O1T">
+                                <rect key="frame" x="20" y="205" width="374" height="417"/>
+                                <mutableString key="text">In this game, a number of bubbles are randomly displayed on the screen. The aim of the game is to pop as many bubbles as possible. Bubbles come in five colours: Red, Purple, Green, Blue and Brown. Each colour corresponds to a specific number of points and has a specific probability of appearing. Note that if you pop two or more bubbles of the same colour consecutively, they earn 1.5 times the points for the additional bubbles they pop. After the game has finished, if your score is higher than your previous high score, it will be saved and displayed in the High Scores section.</mutableString>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you play Bubble Pop?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-ve-H29">
                                 <rect key="frame" x="46.5" y="128" width="321" height="27"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-VY-O1T" customClass="DesignableLabel" customModule="Bubble_Pop" customModuleProvider="target">
-                                <rect key="frame" x="20" y="230" width="374" height="417"/>
-                                <color key="backgroundColor" white="1" alpha="0.70601455479452058" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">In this game, a number of bubbles are randomly displayed on the screen. The aim of the game is to pop as many bubbles as possible. Bubbles come in five colours: Red, Purple, Green, Blue and Brown. Each colour corresponds to a specific number of points and has a specific probability of appearing. Note that if you pop two or more bubbles of the same colour consecutively, they earn 1.5 times the points for the additional bubbles they pop. After the game has finished, if your score is higher than your previous high score, it will be saved and displayed in the High Scores section.</string>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="MNH-ve-H29" firstAttribute="centerX" secondItem="9sI-v4-LdC" secondAttribute="centerX" id="7If-b4-2y2"/>
-                            <constraint firstItem="rIr-fk-jgy" firstAttribute="trailing" secondItem="DWf-VY-O1T" secondAttribute="trailing" constant="20" id="FdX-UH-Axm"/>
+                            <constraint firstItem="DWf-VY-O1T" firstAttribute="centerX" secondItem="9sI-v4-LdC" secondAttribute="centerX" id="Me3-7X-Gac"/>
+                            <constraint firstItem="DWf-VY-O1T" firstAttribute="top" secondItem="MNH-ve-H29" secondAttribute="bottom" constant="50" id="QsW-UY-pHe"/>
+                            <constraint firstItem="DWf-VY-O1T" firstAttribute="leading" secondItem="rIr-fk-jgy" secondAttribute="leading" constant="20" id="Y8G-eF-VPu"/>
                             <constraint firstItem="MNH-ve-H29" firstAttribute="top" secondItem="rIr-fk-jgy" secondAttribute="top" constant="40" id="Zz2-0k-ROH"/>
-                            <constraint firstItem="DWf-VY-O1T" firstAttribute="leading" secondItem="rIr-fk-jgy" secondAttribute="leading" constant="20" id="f51-gt-XX5"/>
-                            <constraint firstItem="DWf-VY-O1T" firstAttribute="top" secondItem="MNH-ve-H29" secondAttribute="bottom" constant="75" id="hSt-68-Jtl"/>
+                            <constraint firstItem="rIr-fk-jgy" firstAttribute="trailing" secondItem="DWf-VY-O1T" secondAttribute="trailing" constant="20" id="fPf-rK-z2H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rIr-fk-jgy"/>
                     </view>
@@ -550,7 +452,6 @@
         <image name="Blue Stroke" width="565" height="190.5"/>
         <image name="Green Stroke" width="565" height="190.5"/>
         <image name="Main Menu Background" width="360" height="640"/>
-        <image name="Orange Stroke" width="565" height="190.5"/>
         <image name="Red Stroke" width="565" height="190.5"/>
     </resources>
 </document>
