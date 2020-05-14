@@ -21,19 +21,22 @@ class HighScores: UIViewController {
         
         let userDefaults = UserDefaults.standard // access shared defaults object
         
-        let highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        let highScores: [String:Double] = userDefaults.object(forKey: "allScores") as? [String:Double] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
         let sortedScores = highScores.sorted { $0.1 > $1.1 } // Sort highscores in descending order by score
         
         if (sortedScores.isEmpty) {
             score1.text = "No highscores have been saved yet" // set placeholder text for when highscores is empty
         } else {
+            var count = 0
             score1.text = ""
             score1.numberOfLines = 0
             for key in sortedScores {
-                score1.text! += "\(key.key)'s high score is \(key.value) \n \n"
+                if (count < 5) { // make sure only the top 5 highscores are displayed
+                    score1.text! += "\(key.key)'s high score is \(key.value) \n \n"
+                    count += 1
+                }
             }
         }
-        
     }
 }
