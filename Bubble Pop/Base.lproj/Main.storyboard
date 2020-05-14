@@ -51,6 +51,7 @@
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-qT-VuV" customClass="DesignableButton" customModule="Bubble_Pop" customModuleProvider="target">
                                 <rect key="frame" x="77" y="388.5" width="260" height="119"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="p2i-qT-VuV" secondAttribute="height" multiplier="260:119" id="M6a-vS-GwR"/>
                                     <constraint firstAttribute="width" secondItem="p2i-qT-VuV" secondAttribute="height" multiplier="260:119" id="SbD-sR-nK0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="26"/>
@@ -128,18 +129,17 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="YuL-TI-O5T" firstAttribute="top" secondItem="p2i-qT-VuV" secondAttribute="bottom" constant="8.5" id="698-wz-KvZ"/>
+                            <constraint firstItem="YuL-TI-O5T" firstAttribute="top" secondItem="p2i-qT-VuV" secondAttribute="bottom" constant="8.5" id="2kX-cL-hh0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gy6-G0-EUL" secondAttribute="trailing" constant="77" id="87J-DF-4SJ"/>
                             <constraint firstItem="FEk-KH-pHZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdl-bX-MNv"/>
+                            <constraint firstItem="p2i-qT-VuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F5W-7z-V77"/>
                             <constraint firstItem="gy6-G0-EUL" firstAttribute="top" secondItem="YuL-TI-O5T" secondAttribute="bottom" constant="8.5" id="IIT-kb-kzk"/>
                             <constraint firstAttribute="bottom" secondItem="VIi-d7-fez" secondAttribute="bottom" constant="-13" id="KCD-qN-FgF"/>
-                            <constraint firstItem="p2i-qT-VuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Scx-mW-FSO"/>
                             <constraint firstItem="p2i-qT-VuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U6k-iV-2Lf"/>
                             <constraint firstItem="VIi-d7-fez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-53" id="eBr-xl-yUe"/>
                             <constraint firstItem="gy6-G0-EUL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="hEG-tf-mFv"/>
                             <constraint firstItem="FEk-KH-pHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="oHD-vn-uhQ"/>
                             <constraint firstAttribute="trailing" secondItem="VIi-d7-fez" secondAttribute="trailing" constant="-52" id="tmr-7d-fr3"/>
-                            <constraint firstItem="p2i-qT-VuV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="vun-Rb-hG3"/>
                             <constraint firstItem="YuL-TI-O5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="yFl-pu-AW2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YuL-TI-O5T" secondAttribute="trailing" constant="77" id="zBw-Dl-CT9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p2i-qT-VuV" secondAttribute="trailing" constant="77" id="zNT-re-pBo"/>
@@ -625,6 +625,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="jjV-Dg-in3"/>
         <segue reference="IKV-su-t7Y"/>
     </inferredMetricsTieBreakers>
     <resources>
