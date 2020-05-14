@@ -394,7 +394,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="912"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM9-yc-Syj" userLabel="My View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="912"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="986"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you play Bubble Pop?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-ve-H29">
                                                 <rect key="frame" x="46.5" y="35" width="321" height="27"/>
@@ -406,13 +406,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3vn-gb-rMT" customClass="DesignableTextView" customModule="Bubble_Pop" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="127" width="390" height="476"/>
+                                                <rect key="frame" x="12" y="127" width="390" height="550"/>
                                                 <color key="backgroundColor" white="1" alpha="0.68444991438356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="3vn-gb-rMT" secondAttribute="height" multiplier="195:238" id="Mz1-PU-cWr"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="550" id="t2L-oY-Ayg"/>
                                                 </constraints>
                                                 <mutableString key="text">In this game, a number of bubbles are randomly displayed on the screen. The aim of the game is to pop as many bubbles as possible. Bubbles come in five colours: Red, Purple, Green, Blue and Brown. Each colour corresponds to a specific number of points and has a specific probability of appearing (as shown in the table below). Note that if you pop two or more bubbles of the same colour consecutively, they earn 1.5 times the points for the additional bubbles they pop. After the game has finished, if your score is higher than your previous high score, it will be saved and displayed in the High Scores section. However, only the top five scores will be displayed.</mutableString>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
@@ -431,7 +431,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bubble Points" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-O0-3UL">
-                                                <rect key="frame" x="5" y="653" width="404" height="136"/>
+                                                <rect key="frame" x="5" y="727" width="404" height="136"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="hOS-O0-3UL" secondAttribute="height" multiplier="101:34" id="n5N-x6-AtK"/>
                                                 </constraints>
