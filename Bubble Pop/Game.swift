@@ -211,10 +211,10 @@ class Game: UIViewController {
     
     func setUpRandomArray() { // set up random array to store colours with weights
         let red = [String](repeating: "Red.png", count: 40) // sets up each individual colour array with weighting
-        let purple = [String](repeating: "Purple.png", count: 30)
+        let purple = [String](repeating: "Pink.png", count: 30)
         let green = [String](repeating: "Green.png", count: 15)
         let blue = [String](repeating: "Blue.png", count: 10)
-        let brown = [String](repeating: "Brown.png", count: 5)
+        let brown = [String](repeating: "Black.png", count: 5)
 
         colours = red + purple + green + blue + brown // add each single array to the larger array
 

@@ -31,13 +31,13 @@ class Bubble: UIButton {
         switch colour { // set the number of points based on bubble colour
         case "Red.png":
             self.points = 1.0
-        case "Purple.png":
+        case "Pink.png":
             self.points = 2.0
         case "Green.png":
             self.points = 5.0
         case "Blue.png":
             self.points = 8.0
-        case "Brown.png":
+        case "Black.png":
             self.points = 10.0
         default:
             self.points = 1.0
