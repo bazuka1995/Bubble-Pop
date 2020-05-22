@@ -44,7 +44,8 @@ class Game: UIViewController {
         timeLeft.text = String(gameTime) // Update time left title
         
         let userDefaults = UserDefaults.standard // access shared defaults object
-        let highScores: [String:Int] = userDefaults.object(forKey: "allScores") as? [String:Int] ?? [:] // if dictionary doesnt exist, start with empty dictionary
+        
+        let highScores: [String:Double] = userDefaults.object(forKey: "allScores") as? [String:Double] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
         if (highScores[finalName] != nil) { // check to see that the users highscore has been saved before
             highScoreLabel.text = String(highScores[finalName]!)

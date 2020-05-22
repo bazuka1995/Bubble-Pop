@@ -10,10 +10,12 @@ import UIKit
 
 class Instructions: UIViewController {
 
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        navigationBar.title = "Instructions"
     }
 
 }

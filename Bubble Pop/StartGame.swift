@@ -64,6 +64,8 @@ class StartGame: UIViewController, UITextFieldDelegate {
         
         startButton.isEnabled = false // start with disabled button until user enters name
         
+        errorLabel.text = "Please enter a name that is greater than 2 characters"
+        
         nameField.addTarget(self, action: #selector(self.validateName), for: .editingChanged) // add target to namefield so that the name can be validated
         
         nameField.delegate = self
