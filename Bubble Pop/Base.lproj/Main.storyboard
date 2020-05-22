@@ -598,6 +598,7 @@
                     <navigationItem key="navigationItem" id="TQb-eP-LFD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="gameOverLabel" destination="7U8-3p-XsV" id="PSH-FW-WqB"/>
                         <outlet property="navigationBar" destination="TQb-eP-LFD" id="zCh-bB-l55"/>
                         <outlet property="scoreLabel" destination="RuP-Z4-SOc" id="LJz-pu-KjN"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="GoHome" id="IKV-su-t7Y"/>
