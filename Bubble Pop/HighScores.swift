@@ -10,6 +10,8 @@ import UIKit
 
 class HighScores: UIViewController {
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     @IBOutlet weak var score1: UILabel!
     
     override func viewDidLoad() {
@@ -18,6 +20,8 @@ class HighScores: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        navigationBar.title = "High Scores"
         
         let userDefaults = UserDefaults.standard // access shared defaults object
         

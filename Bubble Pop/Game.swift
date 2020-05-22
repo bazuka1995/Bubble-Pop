@@ -50,10 +50,10 @@ class Game: UIViewController {
         if (highScores[finalName] != nil) { // check to see that the users highscore has been saved before
             let sortedScores = highScores.sorted { $0.1 > $1.1 } // Sort highscores in descending order by score
             if let firstScore = sortedScores.first?.key { // get the key in first place
-                highScoreLabel.text = String(highScores[firstScore]!) // Show the total highscore, not just the user's highscore
+                highScoreLabel.text = String(highScores[firstScore]!) // Show the total highscore, not just the current user's highscore
             }
         } else {
-            highScoreLabel.text = "---"
+            highScoreLabel.text = "---" // Display nothing if there hasnt been any scores yet
         }
         
         setUpRandomArray()

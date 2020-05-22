@@ -13,10 +13,14 @@ class GameOver: UIViewController {
     var finalScore = ""
     var finalName = ""
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     @IBOutlet weak var scoreLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationBar.title = "Game Over, \(finalName)!" // set the navigation bar title
         
         scoreLabel.text = finalScore
         
