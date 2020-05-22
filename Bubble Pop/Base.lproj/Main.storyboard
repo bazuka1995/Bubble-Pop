@@ -390,7 +390,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="912"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM9-yc-Syj" userLabel="My View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="945"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="912"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you play Bubble Pop?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-ve-H29">
                                                 <rect key="frame" x="46.5" y="35" width="321" height="27"/>
@@ -434,6 +434,7 @@
                                             </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hOS-O0-3UL" secondAttribute="bottom" constant="110" id="10U-a8-5mh"/>
                                             <constraint firstItem="MNH-ve-H29" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OM9-yc-Syj" secondAttribute="leading" id="26v-Jg-fPY"/>
                                             <constraint firstItem="hOS-O0-3UL" firstAttribute="top" secondItem="3vn-gb-rMT" secondAttribute="bottom" constant="40" id="DcM-Zw-Jcd"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MNH-ve-H29" secondAttribute="trailing" id="JD3-eK-ZPj"/>
@@ -442,7 +443,6 @@
                                             <constraint firstItem="3vn-gb-rMT" firstAttribute="top" secondItem="MNH-ve-H29" secondAttribute="bottom" constant="35" id="MPr-Mi-wWj"/>
                                             <constraint firstItem="hOS-O0-3UL" firstAttribute="leading" secondItem="OM9-yc-Syj" secondAttribute="leading" constant="5" id="MXw-WU-FKP"/>
                                             <constraint firstItem="3vn-gb-rMT" firstAttribute="leading" secondItem="OM9-yc-Syj" secondAttribute="leading" constant="12" id="VrG-fC-PbT"/>
-                                            <constraint firstAttribute="bottom" secondItem="hOS-O0-3UL" secondAttribute="bottom" constant="143" id="WDR-3Z-usV"/>
                                             <constraint firstItem="MNH-ve-H29" firstAttribute="centerX" secondItem="OM9-yc-Syj" secondAttribute="centerX" id="bNq-QL-qxI"/>
                                             <constraint firstAttribute="trailing" secondItem="hOS-O0-3UL" secondAttribute="trailing" constant="5" id="hkj-pe-7gx"/>
                                             <constraint firstItem="3vn-gb-rMT" firstAttribute="centerX" secondItem="OM9-yc-Syj" secondAttribute="centerX" id="ms9-bD-Hqe"/>
