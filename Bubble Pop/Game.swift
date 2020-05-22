@@ -48,7 +48,10 @@ class Game: UIViewController {
         let highScores: [String:Double] = userDefaults.object(forKey: "allScores") as? [String:Double] ?? [:] // if dictionary doesnt exist, start with empty dictionary
         
         if (highScores[finalName] != nil) { // check to see that the users highscore has been saved before
-            highScoreLabel.text = String(highScores[finalName]!)
+            let sortedScores = highScores.sorted { $0.1 > $1.1 } // Sort highscores in descending order by score
+            if let firstScore = sortedScores.first?.key { // get the key in first place
+                highScoreLabel.text = String(highScores[firstScore]!) // Show the total highscore, not just the user's highscore
+            }
         } else {
             highScoreLabel.text = "---"
         }
