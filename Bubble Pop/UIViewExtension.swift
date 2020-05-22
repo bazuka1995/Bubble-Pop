@@ -4,7 +4,8 @@
 //
 //  Created by Dov Royal on 13/5/20.
 //  Copyright © 2020 Dov Royal. All rights reserved.
-//
+//  Class to enable extra storyboard features and dynamic displaying of certain display elements
+//  11995305
 
 import UIKit
 

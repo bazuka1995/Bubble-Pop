@@ -4,7 +4,8 @@
 //
 //  Created by Dov Royal on 12/5/20.
 //  Copyright © 2020 Dov Royal. All rights reserved.
-//
+//  Class to store all the animations
+//  11995305
 
 import Foundation
 import UIKit
