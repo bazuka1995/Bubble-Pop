@@ -285,49 +285,73 @@
                                     <constraint firstAttribute="width" secondItem="077-Z5-2R3" secondAttribute="height" multiplier="519:923" id="1mn-Um-fMd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXO-jQ-0Xd">
-                                <rect key="frame" x="20" y="140" width="95" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65Y-9B-ikE">
+                                <rect key="frame" x="82.5" y="103" width="64" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hXO-jQ-0Xd" secondAttribute="height" multiplier="95:29" id="aIE-GF-asA"/>
+                                    <constraint firstAttribute="width" secondItem="65Y-9B-ikE" secondAttribute="height" multiplier="64:29" id="qTX-Fn-EFX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65Y-9B-ikE">
-                                <rect key="frame" x="175" y="103" width="64" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATu-Za-ug8">
+                                <rect key="frame" x="161.5" y="103" width="80" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ATu-Za-ug8" secondAttribute="height" multiplier="80:29" id="d7d-86-xGP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvB-NJ-ZhC">
-                                <rect key="frame" x="174.5" y="140" width="65" height="29"/>
+                                <rect key="frame" x="82.5" y="138" width="64" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rvB-NJ-ZhC" secondAttribute="height" multiplier="65:29" id="via-iG-Ocl"/>
+                                    <constraint firstAttribute="width" secondItem="rvB-NJ-ZhC" secondAttribute="height" multiplier="64:29" id="DYA-Za-Rfx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoM-ZD-cBH">
+                                <rect key="frame" x="161.5" y="138" width="80" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BoM-ZD-cBH" secondAttribute="height" multiplier="80:29" id="hZi-eh-gkH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-pQ-f4v">
+                                <rect key="frame" x="5" y="103" width="62.5" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sj4-pQ-f4v" secondAttribute="height" multiplier="62:29" id="zxu-2b-H70"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-9c-5de">
-                                <rect key="frame" x="271.5" y="103" width="122.5" height="29"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-2h-rX0">
-                                <rect key="frame" x="272" y="140" width="123" height="29"/>
+                                <rect key="frame" x="286" y="103" width="123" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="f4g-2h-rX0" secondAttribute="height" multiplier="123:29" id="IpX-Gn-VDc"/>
+                                    <constraint firstAttribute="width" secondItem="YDZ-9c-5de" secondAttribute="height" multiplier="122:29" id="irG-QF-Y5Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-pQ-f4v">
-                                <rect key="frame" x="20" y="103" width="95" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-2h-rX0">
+                                <rect key="frame" x="286" y="138" width="123" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="sj4-pQ-f4v" secondAttribute="height" multiplier="95:29" id="xrd-7d-itu"/>
+                                    <constraint firstAttribute="width" secondItem="f4g-2h-rX0" secondAttribute="height" multiplier="123:29" id="kRh-tN-PKb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXO-jQ-0Xd">
+                                <rect key="frame" x="5" y="138" width="63" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hXO-jQ-0Xd" secondAttribute="height" multiplier="63:29" id="5zi-ZN-81U"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -335,32 +359,34 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="65Y-9B-ikE" firstAttribute="centerX" secondItem="fuL-iC-Aep" secondAttribute="centerX" id="0cY-9o-cRJ"/>
-                            <constraint firstItem="65Y-9B-ikE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sj4-pQ-f4v" secondAttribute="trailing" constant="8" symbolic="YES" id="1XQ-W4-CK6"/>
-                            <constraint firstItem="RTj-jA-fB5" firstAttribute="trailing" secondItem="f4g-2h-rX0" secondAttribute="trailing" constant="19" id="3br-4a-rbn"/>
-                            <constraint firstItem="YDZ-9c-5de" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="65Y-9B-ikE" secondAttribute="trailing" constant="8" symbolic="YES" id="FAW-cE-yrC"/>
+                            <constraint firstItem="YDZ-9c-5de" firstAttribute="centerY" secondItem="sj4-pQ-f4v" secondAttribute="centerY" id="0mI-cp-xjP"/>
+                            <constraint firstItem="f4g-2h-rX0" firstAttribute="centerY" secondItem="hXO-jQ-0Xd" secondAttribute="centerY" id="65b-VN-Pk0"/>
+                            <constraint firstItem="hXO-jQ-0Xd" firstAttribute="centerX" secondItem="sj4-pQ-f4v" secondAttribute="centerX" id="7ry-aw-rAD"/>
+                            <constraint firstItem="rvB-NJ-ZhC" firstAttribute="centerY" secondItem="hXO-jQ-0Xd" secondAttribute="centerY" id="EtU-xx-cWm"/>
+                            <constraint firstItem="sj4-pQ-f4v" firstAttribute="leading" secondItem="RTj-jA-fB5" secondAttribute="leading" constant="5" id="Gdv-Fc-d2C"/>
+                            <constraint firstItem="f4g-2h-rX0" firstAttribute="centerX" secondItem="YDZ-9c-5de" secondAttribute="centerX" id="IzD-uo-a66"/>
+                            <constraint firstItem="hXO-jQ-0Xd" firstAttribute="top" secondItem="sj4-pQ-f4v" secondAttribute="bottom" constant="6" id="LGW-jU-rCa"/>
                             <constraint firstAttribute="bottom" secondItem="077-Z5-2R3" secondAttribute="bottom" constant="-13" id="Nhe-aw-b9M"/>
+                            <constraint firstItem="BoM-ZD-cBH" firstAttribute="centerY" secondItem="hXO-jQ-0Xd" secondAttribute="centerY" id="PLg-QE-Nlk"/>
                             <constraint firstAttribute="trailing" secondItem="077-Z5-2R3" secondAttribute="trailing" constant="-52" id="QXr-oS-i4W"/>
-                            <constraint firstItem="sj4-pQ-f4v" firstAttribute="leading" secondItem="RTj-jA-fB5" secondAttribute="leading" constant="20" id="S9L-Ns-Uda"/>
-                            <constraint firstItem="sj4-pQ-f4v" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="T59-yf-N26"/>
                             <constraint firstItem="077-Z5-2R3" firstAttribute="top" secondItem="fuL-iC-Aep" secondAttribute="top" constant="-14" id="Tye-PZ-CnK"/>
-                            <constraint firstItem="rvB-NJ-ZhC" firstAttribute="centerX" secondItem="fuL-iC-Aep" secondAttribute="centerX" id="WrF-BX-4A3"/>
-                            <constraint firstItem="hXO-jQ-0Xd" firstAttribute="leading" secondItem="RTj-jA-fB5" secondAttribute="leading" constant="20" id="XJV-VO-hI2"/>
-                            <constraint firstItem="hXO-jQ-0Xd" firstAttribute="top" secondItem="sj4-pQ-f4v" secondAttribute="bottom" constant="8" id="cqz-hg-3Bz"/>
-                            <constraint firstItem="f4g-2h-rX0" firstAttribute="top" secondItem="YDZ-9c-5de" secondAttribute="bottom" constant="8" id="cxX-An-8zN"/>
-                            <constraint firstItem="RTj-jA-fB5" firstAttribute="trailing" secondItem="YDZ-9c-5de" secondAttribute="trailing" constant="20" id="eJF-Dp-t9j"/>
-                            <constraint firstItem="rvB-NJ-ZhC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hXO-jQ-0Xd" secondAttribute="trailing" constant="8" symbolic="YES" id="fRo-IG-EK8"/>
-                            <constraint firstItem="65Y-9B-ikE" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="lfT-Bz-vUb"/>
+                            <constraint firstItem="RTj-jA-fB5" firstAttribute="trailing" secondItem="YDZ-9c-5de" secondAttribute="trailing" constant="5" id="UZE-xx-HIl"/>
+                            <constraint firstItem="rvB-NJ-ZhC" firstAttribute="centerX" secondItem="65Y-9B-ikE" secondAttribute="centerX" id="Vhp-JR-73M"/>
+                            <constraint firstItem="YDZ-9c-5de" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="axO-8A-wdL"/>
+                            <constraint firstItem="BoM-ZD-cBH" firstAttribute="centerX" secondItem="ATu-Za-ug8" secondAttribute="centerX" id="d4Z-pu-ddA"/>
+                            <constraint firstItem="ATu-Za-ug8" firstAttribute="leading" secondItem="65Y-9B-ikE" secondAttribute="trailing" constant="15" id="eHz-Yf-hL9"/>
+                            <constraint firstItem="65Y-9B-ikE" firstAttribute="leading" secondItem="sj4-pQ-f4v" secondAttribute="trailing" constant="15" id="gD7-OL-n8I"/>
+                            <constraint firstItem="sj4-pQ-f4v" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="gFX-9t-27C"/>
+                            <constraint firstItem="65Y-9B-ikE" firstAttribute="centerY" secondItem="sj4-pQ-f4v" secondAttribute="centerY" id="odo-Xc-FxA"/>
                             <constraint firstItem="077-Z5-2R3" firstAttribute="leading" secondItem="fuL-iC-Aep" secondAttribute="leading" constant="-53" id="qdw-Kc-N4y"/>
-                            <constraint firstItem="rvB-NJ-ZhC" firstAttribute="top" secondItem="65Y-9B-ikE" secondAttribute="bottom" constant="8" id="qt6-pl-olm"/>
-                            <constraint firstItem="f4g-2h-rX0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rvB-NJ-ZhC" secondAttribute="trailing" constant="8" symbolic="YES" id="wNq-hg-xzQ"/>
-                            <constraint firstItem="YDZ-9c-5de" firstAttribute="top" secondItem="RTj-jA-fB5" secondAttribute="top" constant="15" id="zue-Ae-tcW"/>
+                            <constraint firstItem="ATu-Za-ug8" firstAttribute="centerY" secondItem="sj4-pQ-f4v" secondAttribute="centerY" id="wa6-dQ-cZ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RTj-jA-fB5"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Jt-qW-pfq"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="comboLabel" destination="BoM-ZD-cBH" id="kDG-BB-sQJ"/>
                         <outlet property="highScoreLabel" destination="f4g-2h-rX0" id="16H-Qs-6gv"/>
                         <outlet property="scoreLabel" destination="rvB-NJ-ZhC" id="5rS-v5-xq4"/>
                         <outlet property="timeLeft" destination="hXO-jQ-0Xd" id="rKA-fh-C7h"/>
@@ -628,6 +654,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="cAs-vP-X1l"/>
         <segue reference="IKV-su-t7Y"/>
     </inferredMetricsTieBreakers>
     <resources>

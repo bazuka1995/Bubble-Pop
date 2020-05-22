@@ -29,6 +29,8 @@ class Game: UIViewController {
     var bubbleArray: [Bubble] = [] // array to store all the bubbles
     var lastBubble: [String] = [] // array to store the colour of the bubble last pressed
     
+    var combo = 0 // keep track of how many of the same coloured bubbles are pressed consecutively
+    
     @IBOutlet weak var timeLeft: UILabel! // Time left ui label in top left corner
     
     @IBOutlet weak var welcomeNav: UINavigationItem! // Navigation bar
@@ -37,8 +39,12 @@ class Game: UIViewController {
     
     @IBOutlet weak var highScoreLabel: UILabel!
     
+    @IBOutlet weak var comboLabel: UILabel!
+    
     override func viewDidLoad() {
         setMaxCoord(name: String(UIDevice.current.name))
+        
+        comboLabel.text = String(combo)
         
         welcomeNav.title = "Hello " + finalName // Update navbar title
         timeLeft.text = String(gameTime) // Update time left title
@@ -193,9 +199,13 @@ class Game: UIViewController {
             if (lastBubble[0] == lastBubble[1]) { // if there are two of the same bubble colours pressed consecutively, add 50% to the score
                 score += (bubble.points * 1.5)
                 scoreLabel.text = String(score)
+                combo += 1
+                comboLabel.text = String(combo)
             } else {
                 score += bubble.points
                 scoreLabel.text = String(score)
+                combo = 0 // reset to 0 since the user has pressed a different coloured bubble
+                comboLabel.text = String(combo)
             }
             
             lastBubble[0] = lastBubble[1] // after adding the score, move the most recent button colour to the previous button press
